@@ -1,0 +1,73 @@
+@import 'reset.css';
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  line-height: 1.15;
+  font-size: 16px;
+  font-family: 'Roboto';
+}
+
+body {
+  background-color: rgb(223, 230, 238);
+}
+
+.wrapper {
+  background-color: rgb(237, 242, 247);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 100vh;
+}
+@media screen and (max-width: 800px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wrapper .intro {
+  color: rgb(73, 100, 128);
+  font-size: 0.8em;
+  font-weight: 500;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+}
+
+.wrapper .intro p {
+  padding: 0;
+  margin: 0.3em 0;
+}
+
+.wrapper .intro a,
+.wrapper .intro a:visited {
+  color: rgb(49, 140, 252);
+  text-decoration: none;
+}
+
+.wrapper > main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.wrapper > aside {
+  padding: 10px;
+  overflow-y: auto;
+}
